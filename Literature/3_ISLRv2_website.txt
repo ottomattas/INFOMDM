@@ -1,0 +1,1 @@
+Chapter 8 from An Introduction to Statistical Learning (ISLR), except for section 8.2.3 (Boosting). Look here (https://www.r-bloggers.com/2014/09/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/) for video lectures for the book.
