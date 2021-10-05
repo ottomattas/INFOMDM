@@ -1,0 +1,20 @@
+Homework exercise set 1: Classification Trees
+
+Q1: Answer: (e) between x=6 and x=7
+
+Q2: Answer: (d) x in {a,b,d} Note: x in {a,b,c} has smaller impurity reduction than x in {a,b,d}.
+
+Q3: Answer: a_2 = 1/10, a_3 = 1/5
+
+Q4: Answer: Most unfavorable: n-1
+    If the observations are sorted on x and in that order the class labels of two consecutive x values are always different, then
+    we have to compute n-1 splits. For example: on ABABABABAB each individual observation is its own segment, and we have to compute 9 splits.
+
+    Most favorable: k-1
+    If the observations are sorted on x and in that order the class labels are all grouped together, then we have k segments, and k-1 splits to compute.
+    For example (for k=3): AAABBBBCCC
+
+Q5: Answer: (a) the same (b) higher
+
+    Note on (a): nmin is always effectively >= 2* minleaf because if a node has less than 2*minleaf observations it can't be split without
+                 violating the minleaf constraint.
