@@ -1,0 +1,19 @@
+Homework exercise set 2
+
+1. b,d,f
+
+2. m(0,0)=60, m(1,0)=60,m(0,1)=40,m(1,1)=40, where m denotes the fitted counts.
+
+3. The formula for the fitted counts is m(A,B,C) = n(A)*n(B,C)/N.
+   So m(1,1,1) = n(A=1)*n(B=1,C=1)/N = 105*70/200=36.75, where m denotes the fitted counts.
+
+4. (a) No,creates chordless 4-cycle A-B-E-D-A
+   (b) yes
+   (c) No, creates chordless 4-cycle A-D-E-F-A
+   (d) No,creates chordless 4-cycle B-C-F-E-B
+   (e) No,creates chordless 4-cycle C-D-E-F-C
+   (f) yes
+   (g) No,creates chordless 4-cycle B-D-E-F-B
+
+5. The formula for the fitted counts is m(A,B,C,D) = n(A,B,C)*n(A,C,D)/n(A,C)
+   Removing the edge between A and C corresponds to the removal of 3 u-terms: u(A,C),u(A,B,C), and u(A,C,D).
