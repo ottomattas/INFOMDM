@@ -1,0 +1,1 @@
+Chapters 4 (Naive Bayes and Sentiment) and 5 (Logistic Regression) from Speech and Language Processing (3rd ed.)(https://web.stanford.edu/~jurafsky/slp3) by Jurafsky and Martin.
