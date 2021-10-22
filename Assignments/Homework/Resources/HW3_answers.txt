@@ -1,0 +1,82 @@
+Homework Exercise Set 3
+
+Q1 Apriori
+
+Candidates and their support (x = infrequent):
+
+Level 1:	Level 2:	Level 3:
+
+A 5		AB 2		ACD 2
+B 3		AC 2
+C 3		AD 3
+D 4		BC 1 x
+E 1 x		BD 1 x
+F 1 x		CD 3
+
+(a) support of AD: 3 
+(b) number of level 2 candidates: 6 
+(c) number of level 3 candidates: 1 
+(d) number of frequent item sets: 9
+
+Q2 Aclose
+
+Candidates and their support (x = infrequent or has subset with same support):
+
+Level 1:	Level 2:
+
+A 2		AB 2 x
+B 4		AC 2 x
+C 5		AD 0 x
+D 3		BC 4 x
+E 1 x		BD 2
+		CD 3 x
+
+Generator	Closure
+A		ABC
+B		BC
+C		C
+D		CD
+BD		BCD
+
+
+(a) number of level 2 candidates: 6
+(b) number of level 3 candidates: 0
+(c) number of generators: 5 
+(d) number of closed frequent item sets: 5 
+
+Q3 GSP
+
+Candidates and their support (x = infrequent)
+
+Level 1:	Level 2:	Level 3:
+
+R 5		RR 3		RRR 0 x
+O 5		RO 4		RRO 0 x
+C 2 x		RK 3		RRK 1 x
+K 4		OO 0 x		ROR 3
+Y 2 x		OR 4		ROK 3
+		OK 4		RKR 2
+		KK 0 x		ORR 0 x
+		KR 3		ORK 1 x
+		KO 0 x		OKR 3
+				KRR 0 x
+
+There are no level 4 candidates: every pre-candidate has an infrequent subsequence.
+
+(a) Number of level 2 candidates: 9
+(b) Number of level 3 candidates: 10
+(c) Number of level 4 candidates: 0
+(d) Number of frequent sequences: 12
+
+Q4 Trees
+
+The first column of the table below lists the node numbers in T1; each subsequent column gives a different mapping by giving
+the node numbers in T2 to which the nodes of T1 are mapped. Only the first mapping corresponds to an induced subtree.
+As usual, the nodes are numbered according to depth-first pre-order traversal of the tree.
+
+1: 1 1 1 1 1
+2: 2 3 2 3 6
+3: 5 5 8 8 8
+
+(a) Induced subtrees: 1
+(b) Embedded subtrees: 5
