@@ -1,0 +1,34 @@
+Homework Exercise Set 4
+
+Q1 
+
+Procedure: take the induced subgraph on the ancestral set of the variables occurring in the conditional
+independence statement, and moralize this graph. Then use the separation criterion for undirected graphs.
+
+(a) T
+(b) T
+(c) F
+(d) T
+
+Q2 
+
+(a) (685+15+584+16)/2900 = 0.45
+(b) 1425/(1425+75) = 0.95
+(c) 1 + 1 + 4 = 6
+
+Q3 
+
+(a) 2787 log(2787/2900) + 113 log(113/2900) = -477.46 
+(b) 1269 log(1269/1300) + 31 log(31/1300) + 1518 log(1518/1600) + 82 log(82/1600) = -469.93
+Delta score = -469.93 + 477.46 = 7.53
+(c) This adds one parameter at the cost of log(2900)/2 = 3.99, so delta BIC = 7.53 - 3.99 = 3.54
+
+Q4 
+
+Since the parent set of B changed in the previous iteration, we now have to recompute the delta
+scores of operations that change the parent set of B.
+
+(a) T
+(b) F
+(c) F
+(d) T
