@@ -1,0 +1,94 @@
+Question 1: 20 points
+
+(4 points per question)
+
+(1) b,c
+(2) c
+(3) a (all 4 models give a perfect fit, so the simplest model wins)
+(4) d (exp(0.215) = 1.24)
+(5) a,b,c,d
+
+Question 2: 20 points
+
+(a) (2 points) x <= 2.5, x <= 4, x <= 5.5, x <= 7, x <= 8.5 
+(b) (4 points) x <= 7, x <= 8.5 
+(c) (8 points) 4/25 (or 8/25 depending on the formula used) 
+(d) (6 points) Argument: the multi-way split can be regarded as a sequence of consecutive binary splits.
+    Since each binary split has non-negative impurity reduction, the multi-way split must be 
+    at least as good as any binary split.
+
+    Formal proof for J=3. Suppose the split attribute X has values {a,b,c}.
+    The multiway split has impurity reduction:
+
+    M = i(t) - n(a)/n * i(a) - n(b)/n * i(b) - n(c)/n * i(c)
+
+    where n is the number of observations in node t, n(a) is the number of observations in node t with X=a, etc.
+    Now consider a binary split that sends all cases with X=a or X=b one way, and all cases with X=c the other way.
+    The impurity reduction of this split is:
+
+    B1 = i(t) - (n(a)+n(b))/n * i(a,b) - n(c)/n * i(c)
+
+    We follow up with a split on the node containing a and b, which has impurity reduction:
+
+    B2 = i(a,b) - n(a)/(n(a)+n(b)) * i(a) - n(b)/(n(a)+n(b)) * i(b)
+
+    Verify that M = B1 + (n(a)+n(b))/n * B2, and since (n(a)+n(b))/n * B2 >= 0, it follows that M >= B1.
+    We can make a similar argument, whatever binary split you pick.
+    
+
+Question 3 Frequent Item Set Mining: 20 points
+
+(a) (12 points)
+    Level 1: A:3,B:4,C:5,D:4,E:1 
+    E is pruned because it is infrequent
+
+    Level 2: AB:3,AC:2,AD:1,BC:3,BD:2,CD:4
+    AD is pruned because it is infrequent
+    AB and CD are pruned because they have a subset with the same support
+
+    There are no level 3 candidates
+
+(b) (8 points)	
+        Generator	Closure:Support
+	A		AB:3
+	B		B:4
+	C		C:5
+	D		CD:4
+	AC		ABC:2
+	BC		BC:3
+	BD		BCD:2
+
+Question 4 Bayesian Networks: 25 points
+
+(a) (5 points) No. Explanation (not required): In the moral graph "survival" and "rhc" are connected by an edge,
+    so in the moral graph there is a path from "survial" to "disease" via "rhc".
+
+(b) (5 points) disease <--> rhc and disease <--> cancer
+
+(c) (10 points) After removing rhc --> bp, "bp" has only one parent left, which is "cancer"
+    The relevant counts are (sum over "rhc"):
+
+		<= 85	> 85	Tot
+	no	1599	2780	4379
+	yes	281	691	972
+	meta	95	289	384
+
+    The new contribution of bp to the log-likelihood score becomes:
+    1599 ln(1599/4379) + 2780 ln(2780/4379) + 281 ln(281/972) + 691 ln(691/972) + 95 ln(95/384) + 289 ln(289/384) = -3674
+
+    The change in log-likelihood score = -3674 + 3538 = -136
+
+(d) (5 points) bp had 2 parents (rhc and cancer) with 2*3=6 parent configurations in total. For each parent configuration, 
+    1 parameter had to be estimated, so 6 parameters in total. After removing the edge rhc --> bp, only cancer 
+    is left as a parent, so there are 3 parent configurations left, and for each we have to estimate 1 parameter.
+    This gives 3 parameters in total, so the number of parameters is reduced by 3.
+
+Question 5 Link Prediction: 15 points
+
+(a) (3 points) Yes. The positive sign means the more friends two people have in common, the more likely it is they will become friends as well.
+(b) (5 points) The number of shared neighbors of a and b is 3. -4 + 3 * 1.5 = 0.5
+    exp(0.5)/(1+exp(0.5)) = 0.62 <- fitted model equation. -4 is a beta0 (simple linear model.)
+(c) (4 points) Example: the length of the shortest path between two nodes. For (a,b) this is 2.
+(d) (3 points) If F(x,y) <> F(y,x) then it makes a difference for the value of F in which order we consider a pair.
+    So it could be more probable that x is a friend of y, then the other way around. This doesn't make sense since the friendship 
+    relation is symmetrical.
