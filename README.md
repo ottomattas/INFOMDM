@@ -5,5 +5,6 @@ Data Mining
 
 - Course description: http://www.cs.uu.nl/education/vak/INFOMDM
 - Course page: https://www.cs.uu.nl/docs/vakken/mdm
+- My course student number: 210
 ---
 [Utrecht University](https://www.uu.nl/en) - [Artificial Intelligence Master's program](https://www.uu.nl/masters/en/artificial-intelligence)
